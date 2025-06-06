@@ -6,3 +6,11 @@
 - Improved language detection using `fasttext` (previously `langdetect`) to accurately filter English reviews.
 - English reviews saved in `data/clean_reviews.csv` (X reviews), non-English in `data/non_english_reviews.csv` (Y reviews).
 - Used `google-play-scraper` for scraping and `pandas` for preprocessing.
+
+## Task 2: Sentiment and Thematic Analysis
+- Performed sentiment analysis using DistilBERT (`distilbert-base-uncased-finetuned-sst-2-english`).
+- Classified reviews as positive, negative, or neutral (threshold: 0.6).
+- Optimized DistilBERT with batch processing (e.g., 100-review chunks).
+- Extracted keywords using spaCy with TF-IDF and n-grams (e.g., "login error"), lemmatized with spaCy.
+- Clustered into 5 themes per bank: Account Access Issues, Transaction Performance, User Interface Experience, Customer Support, App Reliability.
+- Fixed AttributeError in keyword frequency saving; results saved in `data/reviews_with_keywords.csv`, keyword frequencies in `data/keyword_frequencies.txt`, and theme statistics in `data/theme_statistics.txt`.
