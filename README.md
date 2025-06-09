@@ -15,8 +15,26 @@
 - Clustered into 5 themes per bank: Account Access Issues, Transaction Performance, User Interface Experience, Customer Support, App Reliability.
 - Fixed AttributeError in keyword frequency saving; results saved in `data/reviews_with_keywords.csv`, keyword frequencies in `data/keyword_frequencies.txt`, and theme statistics in `data/theme_statistics.txt`.
 
-- **Task 3**: Installed Oracle XE
+## Task 3 : Store Cleaned Data in Oracle
 - created `bank_reviews` tablespace 
 - defined schema 
 - inserted >1,000 reviews using `scripts/insert_reviews_oracle.py` in Visual Studio Code, and saved SQL dump as `db/bank_reviews.dmp`.
 - Results saved in `data/reviews_with_keywords.csv`, keyword frequencies in `data/keyword_frequencies.txt`, and theme statistics in `data/theme_statistics.txt`.
+- Scraped 1,800 reviews from Google Play Store for CBE, BOA, and Dashen Bank.
+- Created a database named bank_reviews and defined schema:
+- Banks Table: Stores bank information.
+- Reviews Table: Stores scraped and processed review data.
+- Inserted over 1,000 reviews using Python script scripts/insert_reviews_oracle.py with cx_Oracle.
+- Resolved SYS schema export issues by creating bank_user, moving tables, and generating SQL dump.
+
+## Task 4: Insights and Recommendations
+- Scraped 1,800 reviews from Google Play Store for CBE, BOA, and Dashen Bank.
+- Derived insights from sentiment and theme analysis:
+- Identified drivers (e.g., Customer Support, Transaction Performance) and pain points (e.g., App Reliability, Other) per bank.
+- Compared banks using average sentiment (0.98–0.99) and ratings (BOA: 2.52, CBE: 4.09, Dashen: 4.41).
+- Suggested 2+ improvements per bank (e.g., enhance app reliability, promote customer support).
+- Created 3 visualizations: sentiment distribution, rating distribution, and top themes (saved in visuals/).
+- Used pandas for analysis, matplotlib/seaborn for plots, and Git for version control.
+ 
+
+  
