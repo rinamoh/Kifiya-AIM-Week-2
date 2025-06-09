@@ -14,3 +14,9 @@
 - Extracted keywords using spaCy with TF-IDF and n-grams (e.g., "login error"), lemmatized with spaCy.
 - Clustered into 5 themes per bank: Account Access Issues, Transaction Performance, User Interface Experience, Customer Support, App Reliability.
 - Fixed AttributeError in keyword frequency saving; results saved in `data/reviews_with_keywords.csv`, keyword frequencies in `data/keyword_frequencies.txt`, and theme statistics in `data/theme_statistics.txt`.
+
+- **Task 3**: Installed Oracle XE
+- created `bank_reviews` tablespace 
+- defined schema 
+- inserted >1,000 reviews using `scripts/insert_reviews_oracle.py` in Visual Studio Code, and saved SQL dump as `db/bank_reviews.dmp`.
+- Results saved in `data/reviews_with_keywords.csv`, keyword frequencies in `data/keyword_frequencies.txt`, and theme statistics in `data/theme_statistics.txt`.
