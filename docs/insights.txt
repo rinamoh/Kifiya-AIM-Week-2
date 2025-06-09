@@ -1,0 +1,18 @@
+Average Sentiment by Bank:
+ bank
+BOA       0.983828
+CBE       0.980982
+Dashen    0.992415
+Name: sentiment_score, dtype: float64
+
+BOA                                ['App Reliability']     94
+BOA                        ['Transaction Performance']     20
+BOA                               ['Customer Support']     14
+
+CBE                                ['App Reliability']     40
+CBE                        ['Transaction Performance']     26
+CBE   ['User Interface Experience', 'App Reliability']     13
+
+Dashen                      ['User Interface Experience']     44
+Dashen                        ['Transaction Performance']     43
+Dashen                                ['App Reliability']     23
