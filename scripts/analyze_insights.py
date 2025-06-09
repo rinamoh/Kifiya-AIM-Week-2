@@ -16,22 +16,23 @@ print("Average Sentiment by Bank:\n", sentiment_by_bank)
 themes_by_bank = sentiment_df.groupby(['bank', 'themes']).size().reset_index(name='count')
 print("Theme Counts by Bank:\n", themes_by_bank.sort_values(['bank', 'count'], ascending=[True, False]))
 
-# Identify drivers and pain points (manual check based on output)
+# Identify drivers (top 2 themes by average sentiment)
 drivers = {}
+# Identify pain points (top 2 themes by frequency in negative reviews)
 pain_points = {}
 banks = sentiment_df['bank'].unique()
 
 for bank in banks:
     bank_data = sentiment_df[sentiment_df['bank'] == bank]
-    # Drivers: High sentiment themes
-    driver_themes = bank_data[bank_data['sentiment_score'] > 0.5].groupby('themes').size().nlargest(3).index
-    drivers[bank] = list(driver_themes)
-    # Pain points: Frequent negative themes or low sentiment
-    pain_point_themes = bank_data[bank_data['sentiment_label'] == 'negative'].groupby('themes').size().nlargest(3).index
-    pain_points[bank] = list(pain_point_themes)
+    # Drivers: Top 2 themes with highest average sentiment
+    driver_themes = bank_data.groupby('themes')['sentiment_score'].mean().nlargest(3).index.tolist()
+    drivers[bank] = driver_themes
+    # Pain points: Top 2 themes with most negative reviews
+    pain_point_themes = bank_data[bank_data['sentiment_label'] == 'negative'].groupby('themes').size().nlargest(3).index.tolist()
+    pain_points[bank] = pain_point_themes
 
-print("Drivers by Bank:\n", drivers)
-print("Pain Points by Bank:\n", pain_points)
+print("Refined Drivers by Bank:\n", drivers)
+print("Refined Pain Points by Bank:\n", pain_points)
 
 # Compare banks based on sentiment and ratings
 comparison = pd.DataFrame({

@@ -16,3 +16,19 @@ CBE   ['User Interface Experience', 'App Reliability']     13
 Dashen                      ['User Interface Experience']     44
 Dashen                        ['Transaction Performance']     43
 Dashen                                ['App Reliability']     23
+
+Drivers by Bank:
+- CBE: Customer Support, Transaction Performance
+- BOA: Transaction Performance, Customer Support
+- Dashen: Transaction Performance, User Interface Experience
+
+Pain Points by Bank:
+- CBE: Other, App Reliability
+- BOA: Other, App Reliability
+- Dashen: Other, App Reliability
+
+Bank Comparison:
+- Dashen: Highest rating (4.41), sentiment 0.99.
+- CBE: Rating 4.09, sentiment 0.98.
+- BOA: Lowest rating (2.52), sentiment 0.98.
+- Note: High sentiments may indicate analysis bias; ratings suggest BOA needs focus.
