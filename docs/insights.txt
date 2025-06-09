@@ -1,0 +1,34 @@
+Average Sentiment by Bank:
+ bank
+BOA       0.983828
+CBE       0.980982
+Dashen    0.992415
+Name: sentiment_score, dtype: float64
+
+BOA                                ['App Reliability']     94
+BOA                        ['Transaction Performance']     20
+BOA                               ['Customer Support']     14
+
+CBE                                ['App Reliability']     40
+CBE                        ['Transaction Performance']     26
+CBE   ['User Interface Experience', 'App Reliability']     13
+
+Dashen                      ['User Interface Experience']     44
+Dashen                        ['Transaction Performance']     43
+Dashen                                ['App Reliability']     23
+
+Drivers by Bank:
+- CBE: Customer Support, Transaction Performance
+- BOA: Transaction Performance, Customer Support
+- Dashen: Transaction Performance, User Interface Experience
+
+Pain Points by Bank:
+- CBE: Other, App Reliability
+- BOA: Other, App Reliability
+- Dashen: Other, App Reliability
+
+Bank Comparison:
+- Dashen: Highest rating (4.41), sentiment 0.99.
+- CBE: Rating 4.09, sentiment 0.98.
+- BOA: Lowest rating (2.52), sentiment 0.98.
+- Note: High sentiments may indicate analysis bias; ratings suggest BOA needs focus.
